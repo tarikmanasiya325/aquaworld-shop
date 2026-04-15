@@ -83,3 +83,36 @@ A full-stack eCommerce web application for a Pet Care / Aquarium Store using Jav
 - If Atlas is unavailable during local development, the backend will attempt a fallback connection to `mongodb://127.0.0.1:27017/aquarium`.
 - Admin routes require a JWT and admin privileges.
 - A sample admin user is seeded via the backend seed script.
+
+## Deployment
+
+### Backend
+
+Your backend is already deployed on Render. Make sure your Render service is configured with:
+- `MONGO_URI` from MongoDB Atlas
+- `JWT_SECRET`
+- `NODE_ENV=production`
+
+### Frontend
+
+This repo includes Vercel support in `frontend/vercel.json`.
+
+To deploy the frontend on Vercel:
+1. Log in to Vercel and import the GitHub repo `tarikmanasiya325/aquaworld-shop`.
+2. Set the project root to `frontend`.
+3. Use:
+   - Build command: `npm install && npm run build`
+   - Output directory: `dist`
+4. Add the environment variable:
+   - `VITE_API_URL=https://<your-render-backend-url>/api`
+5. Deploy and copy the live Vercel URL.
+
+### Local Vercel deployment
+
+If you want to deploy from the command line after logging in to Vercel:
+```bash
+cd frontend
+npx vercel
+```
+
+Once deployed, the frontend will connect to your Render backend using `VITE_API_URL`.
