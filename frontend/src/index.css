@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  @apply min-h-screen bg-slate-50 text-slate-900 antialiased;
+  background-image: radial-gradient(circle at top left, rgba(0, 188, 212, 0.12), transparent 25%),
+    linear-gradient(180deg, #f7fbff 0%, #e8f3fb 45%, #ffffff 100%);
+}
+
+* {
+  @apply transition-colors duration-300 ease-out;
+}
+
+button,
+input,
+select,
+textarea {
+  @apply outline-none;
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card-surface {
+  @apply rounded-[28px] bg-white shadow-[0_20px_70px_rgba(30,136,229,0.08)] transition hover:-translate-y-1 hover:shadow-[0_30px_90px_rgba(14,165,233,0.14)];
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#1e88e5] to-[#00bcd4] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-200/40 transition duration-300 ease-out hover:scale-[1.02] hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition duration-300 ease-out hover:border-cyan-300 hover:text-slate-900 hover:shadow-md;
+}
