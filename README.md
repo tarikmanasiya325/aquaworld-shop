@@ -104,7 +104,7 @@ To deploy the frontend on Vercel:
    - Build command: `npm install && npm run build`
    - Output directory: `dist`
 4. Add the environment variable:
-   - `VITE_API_URL=https://<your-render-backend-url>/api`
+   - `VITE_API_URL=https://aquaworld-shop.onrender.com/api`
 5. Deploy and copy the live Vercel URL.
 
 ### Local Vercel deployment
